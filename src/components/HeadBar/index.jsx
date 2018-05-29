@@ -33,14 +33,18 @@ class Head extends Component {
                                 <Icon type="coffee" />
                                 首页
                             </Menu.Item>
+                            <SubMenu title={<span><Icon type="user" />用户管理</span>}>
+                                <Menu.Item key="user-list"><Icon type="pushpin-o" />用户列表</Menu.Item>
+                                <Menu.Item key="user-new"><Icon type="folder-add" />创建用户</Menu.Item>
+                            </SubMenu>
                             <SubMenu title={<span><Icon type="shop" />活动管理</span>}>
-                                <Menu.Item key="setting:list"><Icon type="pushpin-o" />活动列表</Menu.Item>
-                                <Menu.Item key="setting:new"><Icon type="folder-add" />创建活动</Menu.Item>
+                                <Menu.Item key="activity-list"><Icon type="pushpin-o" />活动列表</Menu.Item>
+                                <Menu.Item key="activity-new"><Icon type="folder-add" />创建活动</Menu.Item>
                             </SubMenu>
                             <SubMenu title={<span><Icon type="table" />报表管理</span>}>
-                                <Menu.Item key="rpt:region"><Icon type="area-chart" />地域特征</Menu.Item>
-                                <Menu.Item key="rpt:buy"><Icon type="bar-chart" />购买特征</Menu.Item>
-                                <Menu.Item key="rpt:crow"><Icon type="pie-chart" />人群特征</Menu.Item>
+                                <Menu.Item key="rpt-region"><Icon type="area-chart" />地域特征</Menu.Item>
+                                <Menu.Item key="rpt-buy"><Icon type="bar-chart" />购买特征</Menu.Item>
+                                <Menu.Item key="rpt-crow"><Icon type="pie-chart" />人群特征</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </div>
