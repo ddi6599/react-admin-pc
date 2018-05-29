@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-
+import 'src/styles/index.css'
 import 'nprogress/nprogress.css'
 import registerServiceWorker from './registerServiceWorker';
 import Router from './router'

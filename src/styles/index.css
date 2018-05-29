@@ -1,0 +1,309 @@
+@import '~antd/dist/antd.css';
+@charset "utf-8";
+
+/****************** 调整部分框架的样式,使得更加符合平台风格的要求和中文环境 ******************/
+
+/*
+ * 基于业务需要兼容的浏览器做到以下几点：
+ * 1.解决BUG，特别是低级浏览器的常见BUG；
+ * 2.统一效果，但不盲目追求重置为0；
+ * 3.向后兼容；
+ * 4.考虑响应式；
+ * 5.考虑移动设备。
+ */
+
+body, dl, dd,
+ul, li, ol,
+h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+table, thead, tbody, tfoot, th, td, tr {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+/*
+ * 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+ */
+
+ul,
+ol {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+ol {
+    -webkit-padding-start: 20px;
+}
+
+ul,
+dl {
+    -webkit-padding-start: 0;
+    margin: 0;
+}
+
+i,
+em,
+b,
+strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a,
+input,
+img,
+select,
+textarea {
+    outline: none;
+}
+
+/*
+ * 1. 去除链接默认的下划线，提高文字可读性
+ * 2. 去掉 IE 10+ 点击链接时的灰色背景
+ */
+
+a {
+    text-decoration: none;
+    /* 1 */
+    background-color: transparent;
+    /* 2 */
+}
+
+/*
+ * 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框
+ */
+
+a:hover,
+a:active,
+a:focus {
+    outline-width: 0;
+    text-decoration: none;
+}
+
+/*
+ * 统一 Chrome 和 Safari 的焦点框样式
+ * Chrome 中 thin 关键字放大页面后焦点框不会放大 http://jsbin.com/ehakom/1
+ * Firefox 中 box-shadow 会导致焦点框位置偏移，需用「outline-offset」修正
+ *
+ */
+
+a:focus {
+    outline: 1px dotted;
+}
+
+/*
+ * 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
+ */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*
+ * 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)
+ * 西文使用 tahoma
+ * 1. 防止元素中「font-family」不能继承
+ * 2. 西文字体和 OS X 字体写在前面
+ * 3. Opera 12.1 之前版本不支持中文字体的英文名称
+ * 4. 微软雅黑「\5FAE\8F6F\96C5\9ED1」,中易宋体「\5B8B\4F53」
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'helvetica neue', arial, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', sans-serif;
+}
+
+/*
+ * 统一代码的字体设置
+ * 字体要能明确区分数字 0 和字母 o
+ * Mac 优先使用 Monaco，Windows 优先使用 Consolas
+ * XP自带 Courier New
+ * Windows 7开始自带的 Consolas
+ * Mac上自带的Monaco，Osaka-Mono
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monaco, menlo, consolas, 'courier new', courier, monospace;
+}
+
+/*
+ * 1. 修正所有浏览器中字体不继承的问题
+ * 2. 修正所有浏览器中字号不继承的问题
+ * 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题
+ * 4. 改善在所有浏览器下的垂直对齐方式
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+input:focus {
+    box-shadow: none !important;
+}
+
+/*
+ * 网页标记，荧光笔
+ * 修正 IE6-11 中没有样式的问题
+ */
+
+mark {
+    background-color: #d2e5ff;
+    color: #000;
+}
+
+/*
+ * 统一用双线显示人民币符号「&yen;(￥)」
+ */
+
+.rmb,
+.yuan {
+    font-family: arial;
+    font-style: normal;
+}
+
+label,
+a {
+    cursor: pointer;
+}
+
+/*
+ * 合并单元格边框
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+ * 修复 IE 中 th 不能继承 text-align 的问题并统一左对齐
+ * http://jsbin.com/evoxif/2/edit
+ */
+
+th {
+    text-align: left;
+}
+
+/**样式重置化-start**/
+
+body {
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    /* height: 100%; */
+}
+
+p {
+    margin: 0px;
+}
+
+i {
+    font-style: normal;
+}
+
+ol {
+    -webkit-padding-start: 20px;
+}
+
+ul, dl {
+    -webkit-padding-start: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0px;
+    padding: 0px;
+}
+
+em, b, strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+.router-link-exact-active {
+    /*color: red */
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.ivu-page {
+    margin-top: 20px;
+    display: inline-block;
+    float: right
+}
+
+.ivu-poptip-confirm {
+    text-align: left;
+}
+
+.vertical-mid {
+    vertical-align: middle;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.color-primary {
+    color: #00b5b1;
+}
+
+.bold-fw {
+    font-weight: bold;
+}

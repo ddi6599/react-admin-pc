@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+import { Layout } from 'antd';
 import HeaderBar from 'components/HeadBar'
 import FooterBar from 'components/TabsBar'
+const {Content } = Layout;
 const mainStyles = {
-    width: '100%',
-    height: 'calc(100% - 1rem)'
+    maxWidth: '1200px',
+    margin: '0 auto',
 }
 class App extends Component {
     render () {
         return (
-            <div id="container">
+            <Layout id="container" style={{height: '100vh'}}>
                 <HeaderBar/>
-                <main style={mainStyles}>
-                    {this.props.children}
-                </main>
+                <Content style={{backgroundColor:'#fff'}}>
+                    <div style={mainStyles}>
+                        {this.props.children}
+                    </div>
+                </Content>
                 <FooterBar/>
-            </div>
+            </Layout>
         )
     }
 }
