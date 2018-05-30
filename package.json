@@ -58,10 +58,12 @@
     "fastclick": "^1.0.6",
     "nprogress": "^0.2.0",
     "react": "^16.3.2",
+    "react-countup": "^3.0.3",
     "react-dom": "^16.3.2",
     "react-fastclick": "^3.0.2",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "recharts": "^1.0.0-beta.10",
     "redux": "^3.7.2",
     "redux-actions": "^2.3.0",
     "redux-thunk": "^2.2.0"

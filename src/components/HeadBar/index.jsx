@@ -7,7 +7,7 @@ const SubMenu = Menu.SubMenu
 @withRouter
 class Head extends Component {
     state = {
-        current: 'index',
+        current: '/',
     }
     handleClick = (e) => {
         this.setState({
@@ -29,17 +29,21 @@ class Head extends Component {
                             selectedKeys={[this.state.current]}
                             mode="horizontal"
                         >
-                            <Menu.Item key="index">
+                            <Menu.Item key="/">
                                 <Icon type="coffee" />
                                 首页
                             </Menu.Item>
+                            <SubMenu title={<span><Icon type="desktop" />系统管理</span>}>
+                                <Menu.Item key="sys-dic"><Icon type="filter" />字典管理</Menu.Item>
+                                <Menu.Item key="sys-tags"><Icon type="tag-o" />标签管理</Menu.Item>
+                            </SubMenu>
                             <SubMenu title={<span><Icon type="user" />用户管理</span>}>
                                 <Menu.Item key="user-list"><Icon type="pushpin-o" />用户列表</Menu.Item>
                                 <Menu.Item key="user-new"><Icon type="folder-add" />创建用户</Menu.Item>
                             </SubMenu>
                             <SubMenu title={<span><Icon type="shop" />活动管理</span>}>
-                                <Menu.Item key="activity-list"><Icon type="pushpin-o" />活动列表</Menu.Item>
-                                <Menu.Item key="activity-new"><Icon type="folder-add" />创建活动</Menu.Item>
+                                <Menu.Item key="activity-list"><Icon type="compass" />活动列表</Menu.Item>
+                                <Menu.Item key="activity-new"><Icon type="select" />创建活动</Menu.Item>
                             </SubMenu>
                             <SubMenu title={<span><Icon type="table" />报表管理</span>}>
                                 <Menu.Item key="rpt-region"><Icon type="area-chart" />地域特征</Menu.Item>

@@ -10,9 +10,9 @@ const mainStyles = {
 class App extends Component {
     render () {
         return (
-            <Layout id="container" style={{height: '100vh'}}>
+            <Layout id="container" style={{minHeight: '100vh'}}>
                 <HeaderBar/>
-                <Content style={{backgroundColor:'#fff'}}>
+                <Content>
                     <div style={mainStyles}>
                         {this.props.children}
                     </div>
