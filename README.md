@@ -1,4 +1,6 @@
 In the project directory, you can run:
+### `npm install`
+You should npm install firstly
 
 ### `npm start`
 
