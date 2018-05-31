@@ -30,7 +30,7 @@ class Head extends Component {
 
     }
     render() {
-        const userInfo = JSON.parse(window.localStorage.getItem('login_token'))
+        const userInfo = JSON.parse(window.localStorage.getItem('login_token')) || ''
         return (
             <div className="head-wrap">
                 <div className="head-container">
