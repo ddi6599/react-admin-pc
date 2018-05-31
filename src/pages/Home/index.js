@@ -24,7 +24,7 @@ class Home extends Component {
             { title: 'Name', dataIndex: 'name', key: 'name' },
             { title: 'Age', dataIndex: 'age', key: 'age' },
             { title: 'Address', dataIndex: 'address', key: 'address' },
-            { title: 'Action', dataIndex: '', key: 'x', render: () => <a href="javascript:;">Delete</a> },
+            { title: 'Action', dataIndex: '', key: 'x', render: () => <a href="">Delete</a> },
         ],
         data : [
             { key: 1, name: 'John Brown', age: 32, address: 'New York No. 1 Lake Park', description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.' },

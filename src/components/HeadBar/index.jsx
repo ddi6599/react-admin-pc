@@ -10,15 +10,27 @@ class Head extends Component {
         current: '/',
     }
     handleClick = (e) => {
+        const { history } = this.props
         this.setState({
             current: e.key,
         });
+        history.push(e.key)
     }
-    handleLoginOut = () => { // arrow function to bind this
+    handleLoginOut = (e) => { // arrow function to bind this
         const { history } = this.props
-        history.push(`/login`)
+        if (e.key === 'logout') {
+            window.localStorage.removeItem('login_token')
+            history.push(`/login`)
+        } else {
+            history.push(`/personal`)
+        }
+        this.setState({
+            current: e.key,
+        })
+
     }
     render() {
+        const userInfo = JSON.parse(window.localStorage.getItem('login_token'))
         return (
             <div className="head-wrap">
                 <div className="head-container">
@@ -63,8 +75,9 @@ class Head extends Component {
                                 onClick={this.handleLoginOut}
                                 mode="horizontal"
                             >
-                                <SubMenu title={<span><Icon type="user" />guest</span>}>
-                                    <Menu.Item key="user:logout"><Icon type="logout" />退出</Menu.Item>
+                                <SubMenu title={<span><Icon type="user" />{userInfo.userName}</span>}>
+                                    <Menu.Item key="personal"><Icon type="user" />个人中心</Menu.Item>
+                                    <Menu.Item key="logout"><Icon type="logout" />退出</Menu.Item>
                                 </SubMenu>
                             </Menu>
                         </div>

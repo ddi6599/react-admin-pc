@@ -7,7 +7,8 @@ const _import_pages = file => asyncComponent(() => import(`pages/${file}`))
 export const loyoutRouterMap = [
     { 
         path: '/', 
-        name: '首页', 
+        name: '首页',
+        auth: true,
         exact: true,
         component: _import_pages('Home')
     },
