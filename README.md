@@ -1,7 +1,7 @@
 In the project directory, you can run:
 ### `npm install`
 You should npm install firstly
-(https://github.com/ddi6599/react-admin-pc/blob/master/src/assets/images/logo.png)
+![react-img](https://github.com/ddi6599/react-admin-pc/blob/master/src/assets/images/logo.png)
 
 ### `npm start`
 
