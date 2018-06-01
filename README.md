@@ -5,9 +5,13 @@ You should npm install firstly
 ### `npm start`
 
 输入账号:flying;密码:flying
+
 ![react-img](https://github.com/ddi6599/react-admin-pc/blob/master/src/assets/images/IMG_01.png)
 
 漂亮的首页就呈现出来啦~
+
+![react-img](https://github.com/ddi6599/react-admin-pc/blob/master/src/assets/images/IMG_02.png)
+
 
 Runs the app in the development mode.<br>
 
