@@ -8,16 +8,17 @@ import Router from './router'
 import store from './store'
 
 import initReactFastclick from 'react-fastclick'
-initReactFastclick() // 解决IOS onClick不生效
 
-ReactDOM.render(
-    <Provider store={store}>
-        <div>
-            <Router/>
-        </div>
-    </Provider>
-    , document.getElementById('root'))
-registerServiceWorker();
+initReactFastclick () // 解决IOS onClick不生效
+
+ReactDOM.render (
+  <Provider store={store}>
+    <div>
+      <Router />
+    </div>
+  </Provider>
+  , document.getElementById ('root'))
+registerServiceWorker ();
 
 
 
